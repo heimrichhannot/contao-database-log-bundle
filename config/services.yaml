@@ -1,0 +1,5 @@
+services:
+  HeimrichHannot\DatabaseLogBundle\:
+    resource: '../src/{Monolog}/*'
+    autowire: true
+    autoconfigure: true
