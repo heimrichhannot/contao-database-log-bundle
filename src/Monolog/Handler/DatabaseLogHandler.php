@@ -20,6 +20,10 @@ class DatabaseLogHandler extends RotatingFileHandler
             return;
         }
 
+        if (empty($record['context']['sql'])) {
+            return;
+        }
+
         /** @noinspection SqlWithoutWhere */
         $filters = [
             'ALTER',
