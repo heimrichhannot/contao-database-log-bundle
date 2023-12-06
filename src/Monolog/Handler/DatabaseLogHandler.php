@@ -32,19 +32,23 @@ class DatabaseLogHandler extends RotatingFileHandler
             'SET',
             'SHOW',
             'TRUNCATE',
+            'UNLOCK TABLES',
+            'LOCK TABLES',
 
             'INSERT INTO tl_log',
             'INSERT INTO tl_undo',
             'INSERT INTO tl_version',
 
             'UPDATE tl_member SET session = ? WHERE',
+            'UPDATE tl_search_term'.
             'UPDATE tl_undo',
             'UPDATE tl_user SET session',
             'UPDATE tl_version SET',
 
+            'DELETE FROM tl_search',
+            'DELETE FROM tl_search_index',
             'DELETE FROM tl_search_term',
-            'UNLOCK TABLES',
-            'LOCK TABLES',
+
 
             // project specific
             'INSERT INTO tl_watchlist_item',
